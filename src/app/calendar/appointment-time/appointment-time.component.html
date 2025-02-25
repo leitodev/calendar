@@ -1,0 +1,21 @@
+<button type="button" (click)="debug()">debug</button>
+<div class="schedule">
+  <div class="time-column">
+    <div *ngFor="let item of time" class="time-slot" (click)="addAppointment(item.timeLabel)">
+
+      <div class="time-label">{{item.label}}</div>
+      <div class="appointment">
+        <span class="appointment-item">
+          <div>appointment name</div>
+          <div>appointment time 10:45</div>
+        </span>
+
+        <span class="appointment-item">
+          <div>appointment 2</div>
+          <div>appointment time 44:45</div>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</div>

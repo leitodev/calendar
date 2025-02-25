@@ -1,0 +1,54 @@
+.time-slot {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  gap: 15px;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.time-label {
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 5px;
+
+  &:hover {
+    text-shadow:0px 0px 1px black;
+    cursor: pointer;
+  }
+}
+
+.appointment {
+  display: flex;
+  gap: 3px;
+}
+
+.appointment-item {
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 5px;
+  background: #7986cb;
+  color: #fff;
+  border: 1px solid #CCCCCCFF;
+  display: block;
+  padding: 5px;
+
+  &:hover {
+    background: #6a77b9;
+  }
+}
+
+//.appointment-column {
+//  flex: 1;
+//  position: relative;
+//}
+//
+//.appointment {
+//  position: absolute;
+//  left: 10px;
+//  right: 10px;
+//  background: #2196F3;
+//  color: white;
+//  padding: 5px;
+//  border-radius: 4px;
+//}

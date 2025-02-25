@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Calendar App</span>
+  <span class="spacer"></span>
+  <a href="https://www.linkedin.com/in/leito-hardy/" class="link--favorite" target="_blank">
+    <mat-icon>favorite</mat-icon>
+  </a>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button [routerLink]="['/']" mat-menu-item>Home</button>
+  <button [routerLink]="['calendar']" mat-menu-item>Calendar</button>
+  <button [routerLink]="['contact']" mat-menu-item>Contact</button>
+</mat-menu>
