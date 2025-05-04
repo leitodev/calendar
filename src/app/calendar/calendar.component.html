@@ -1,9 +1,15 @@
 <p>calendar works!</p>
 <h2>Current Month: {{ currentDate | date: 'MMMM yyyy' }}</h2>
 
+<!-- temp button -->
+<button type="button" (click)="toggleCalendar()">Select Date</button>
+<div>
+  selected date: {{selectedDate.start | date}} - {{selectedDate.end | date}}
+</div>
 
-<div class="container">
-  <div class="calendar-card">
+@if (isCalendarVisible){
+  <div class="container">
+    <div class="calendar-card">
       <div class="calendar-container">
         <div class="calendar-header">
           <button mat-icon-button (click)="changeMonth(-1)"><mat-icon>arrow_back_ios</mat-icon></button>
@@ -16,20 +22,19 @@
             {{ day }}
           </div>
           <div class="day-cell"
-               *ngFor="let day of days"
-               [class.empty]="day === 0"
-               [class.today]="day === currentDay && currentStateDate.getMonth() === currentMonth">
-            {{ day || '' }}
+               *ngFor="let item of days"
+               (click)="selectDay(item.day)"
+               [class.selected]="item.selected"
+               [class.empty]="item.day === 0"
+               [class.today]="item.day === currentDay && currentStateDate.getMonth() === currentMonth">
+            {{ item.day || '' }}
           </div>
         </div>
       </div>
+    </div>
   </div>
-  <mat-card class="appointment-card" appearance="outlined">
-    <mat-card-content>
-      <app-appointment-time></app-appointment-time>
-    </mat-card-content>
-  </mat-card>
-</div>
+}
+
 
 
 

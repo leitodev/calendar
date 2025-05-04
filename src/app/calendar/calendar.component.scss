@@ -39,19 +39,23 @@
   border: 1px solid #ddd;
   text-align: center;
   &.today {
-    background-color: lightblue;
+    color: #F10000FF;
     font-weight: 500;
+    border: 1px solid #7c7c7c;
+  }
+
+  &.selected {
+    background-color: #CFE7F5FF;
   }
 }
 
 .day-cell:not(.empty) {
   cursor: pointer;
   &:hover {
+    border: 1px solid #7c7c7c;
     background-color: #CFE7F5FF;
   }
 }
-
-
 
 .empty {
   background-color: #f9f9f9;
